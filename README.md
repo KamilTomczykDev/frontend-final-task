@@ -24,8 +24,8 @@ Mirek potrzebuje też mieć możliwość udostępniać dane o swoich podopieczny
 - wykorzsytaj gotowe środowisko, aby ograniczyć jego czas konfiguracji np. [createreact-app](https://create-react-app.dev)
 - zaimplemntuj rozwiązanie zarządzające stanem np. w React to Redux z rekomendowanym Toolkitem
 - zaimplementuj rozwiązanie wykorzystujące routing np. w React to [React Router](https://reactrouter.com/en/main)
-- do stylowania wykorzystaj Material UI (np. [React](https://mui.com/material-ui/)) lub [Styled Components](https://styled-components.com/),
-- przygotuj działajacą wersję demo na zawnętrznym serwerze np. [Heroku](https://heroku.com)
+- do wyglądu wykorzystaj Material UI (np. [React](https://mui.com/material-ui/)) lub [Tailwinda](https://tailwindcss.com), aby skrócić czas projektowania
+- przygotuj działajacą wersję demo na zewnętrznym serwerze np. [Heroku](https://heroku.com)
 - utwórz README.md, w którym zawrzesz pełną informację jak uruchomić aplikację lokalnie
 
 ## Mile widziane
