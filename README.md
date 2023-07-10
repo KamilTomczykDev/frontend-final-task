@@ -1,40 +1,52 @@
-# Sprawdź czy jesteś gotowy na poszukiwanie pracy!
+# Sprawdź, czy jesteś gotowy na poszukiwanie pracy!
 
-To zadanie powstało w odpowiedzi na pozytywne reakcje widzów do mojego [nagrania na YouTube](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@), w którym zaproponowałem przygotowanie projektu sprawdzającego gotowość do poszukiwań pracy we frontendzie.
+To zadanie powstało w odpowiedzi na pozytywne reakcje widzów na moje [nagranie na YouTubie](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@), w którym zaproponowałem przygotowanie projektu sprawdzającego gotowość do poszukiwania pracy we front endzie.
 
 ## Opis projektu 
 
-> Zwróć uwagę, że będzie to opis wymagań klienta (jego wizja) to Ty powinieneś potrafić przekuć je na działającą aplikację.
+> Zwróć uwagę, że będzie to opis wymagań klienta (jego wizja). To Ty powinieneś przekuć je w działającą aplikację.
 
-Twoim klinetem jest Rekruter IT o imieniu Mirek - jest to tzw. headhunter czyli osoba, która buduje sieć specjalistów IT, którym pomaga w znalezieniu pracy marzeń. Jednocześnie ma kontakty biznesowe, które pozwalają jego podpiecznym te marzenia zrealizować. 
+Twoim klientem jest rekruter IT o imieniu Mirek – jest on tzw. headhunterem czyli osobą, która buduje sieć specjalistów IT i pomaga im w znalezieniu pracy marzeń. Jednocześnie ma kontakty biznesowe, dzięki którym uzyskuje dla „swoich” specjalistów oferty pracy.
 
-Mirek potrzebuje rozwiązania, które pozwoli gromadzić mu informacje o swoich podopiecznych (możemy zawężyć do programistów). Nie chce tracić czasu na samodzielne uzupełnianie tych danych dlatego każdy z programistów ma mieć swój własny panel, przez który te dane będą wprowadzane. Uznajemy, że na początek mają to być informacje podobne do tych, które są dostępne na [LinkedIn](https://www.linkedin.com/in/mateusz-bogolubow/).
+Mirek potrzebuje rozwiązania, które pozwoli mu gromadzić informacje o swoich kontaktach w IT (możemy zawęzić je do programistów). Sam nie chce tracić czasu na uzupełnianie tych danych, dlatego każdy z programistów ma mieć swój własny panel, przez który samodzielnie wprowadzi informacje o sobie. Uznajmy na początek, że mają to być informacje podobne do tych dostępnych na [LinkedInie](https://www.linkedin.com/in/mateusz-bogolubow/).
 
-Jednocześnie Mirek ma możliwość dodawać notatki do każdego z podopiecznych, które nie będą widoczne dla nich.
+Jednocześnie Mirek ma możliwość dodawania do każdego panelu notatki, która nie będzie widoczna dla programisty.
 
-Mirek potrzebuje też mieć możliwość udostępniać dane o swoich podopiecznych oraz notatkach swoim kontaktom biznesowym. Idealnie, gdyby mógł wybrać grupę podopiecznych, które chce udostępnić i pod wskazanym adresem (po podaniu prawidłowego hasła) będą dostępne odpowiednie dane. 
+Mirek potrzebuje też udostępniać informacje o specjalistach (wraz z dodanymi przez niego notatkami) swoim kontaktom biznesowym. Idealnie, gdyby do udostępnienia mógł wybrać naraz kilku programistów. Informacje byłby dla klienta dostępne pod przesłanym przez Mirka adresem po podaniu prawidłowego hasła.
 
 
 ## Wymagania
 
-> Pamiętaj, że często są to zasoby, z jakich możesz korzystać w pracy. Jeśli do tej pory nie miałeś do czynienia, z którym z nich to powinieneś o nich doczytać i wdrożyć. Raczej nie będzie możliwe zmiany tych elementów, bo Ty tak chcesz (i cały zespół ma sie dostosować). 
+> Pamiętaj, że często są to technologie, które możesz spotkać w realnej pracy. Jeśli do tej pory nie miałeś z nimi do czynienia, to powinieneś o nich doczytać i je wdrożyć. W pracy raczej nie miałbyś możliwości zmiany tych elementów, gdyż cały zespół musiałby się wówczas do tego dostosować. 
 
-- użyj jednego ze znanych Ci bibiliotek/frameworków: React, Vue, Angular
-- wykorzystaj API do pobierania danych - możesz skorzystać z [json-server](https://github.com/typicode/json-server) lub [Firebase](https://firebase.google.com)
-- wykorzsytaj gotowe środowisko, aby ograniczyć jego czas konfiguracji np. [createreact-app](https://create-react-app.dev)
-- zaimplemntuj rozwiązanie zarządzające stanem np. w React to Redux z rekomendowanym Toolkitem
-- zaimplementuj rozwiązanie wykorzystujące routing np. w React to [React Router](https://reactrouter.com/en/main)
-- do wyglądu wykorzystaj Material UI (np. [React](https://mui.com/material-ui/)) lub [Tailwinda](https://tailwindcss.com), aby skrócić czas projektowania
-- przygotuj działajacą wersję demo na zewnętrznym serwerze np. [Heroku](https://heroku.com)
-- utwórz README.md, w którym zawrzesz pełną informację jak uruchomić aplikację lokalnie
+- użyj bibliotekę lub framework – coś, co znasz: React, Vue, Angular,
+- wykorzystaj API do przesyłania danych – możesz użyć [JSON Servera](https://github.com/typicode/json-server) lub [Firebase’a](https://firebase.google.com),
+- wykorzystaj gotowe środowisko, np. [create-react-app](https://create-react-app.dev), aby ograniczyć czas konfiguracji,
+- zaimplementuj rozwiązanie zarządzające stanem, np. w React jest to Redux z rekomendowanym Toolkitem,
+- zaimplementuj rozwiązanie wykorzystujące routing, np. w React jest to [React Router](https://reactrouter.com/en/main)
+- do stylowania wykorzystaj [Material UI](https://mui.com/material-ui/) lub [Tailwind CSS](https://tailwindcss.com), aby skrócić czas projektowania,
+- przygotuj działającą wersję demo na zewnętrznym serwerze, np. [Heroku](https://heroku.com),
+- utwórz README.md, w którym zawrzesz pełną informację o tym, jak uruchomić aplikację lokalnie.
 
 ## Mile widziane
 
-- wykorzystanie [TypeScript](https://www.typescriptlang.org/)
+- wykorzystanie [TypeScriptu](https://www.typescriptlang.org/),
 - pokrycie rozwiązania testami ([Jest](https://jestjs.io)/[Testing Library](https://testing-library.com))
 
 ## Podsumowanie
 
-Na zadanie masz 40h. W tym czasie musisz przygotować minimalną wersję produktu, którą zaprezentujesz Mirkowi. To będzie moment, w którym Mirek zadecyduje czy jesteś godzien dalszej współpracy i czy w jego oczach jesteś gotowy na dołączenie do grona jego specjalistów IT. 
+Na zadanie masz 40 godzin. W tym czasie musisz przygotować minimalną wersję produktu, którą zaprezentujesz Mirkowi. To będzie moment, w którym zdecyduje on, czy chce dalej realizować z Tobą swój pomysł. 
 
-Musisz tak wyestymować zadania, aby mieć co mu pokazać jednocześnie musi to być działająca apliakcja. Idealnie, gdybyś mógł udowodnić czas spędzony nad kodowaniem przy pomocy dedykowanej aplikacji np. [Time Camp](https://www.timecamp.com/pl/). 
+Tak zorganizuj sobie zadania, aby mieć co Mirkowi pokazać. Jednocześnie musi to być działająca aplikacja. Idealnie, gdybyś mógł udowodnić czas spędzony nad kodowaniem np. przy pomocy aplikacji [Time Camp](https://www.timecamp.com/pl/).
+
+## Jak prawidłowo rozpocząć pracę?
+
+Najpierw zrób tzw. [`fork`](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) (prawy, górny róg strony). W ten sposób utworzysz kopię tego repozytorium na Twoim koncie GitHub. 
+
+Teraz będziesz mógł wykonywać zadanie na swoim repozytorium. Wystarczy, że skopiujesz pliki na komputer przy pomocy komendy [`git clone`](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+
+Pamiętaj o zapisywaniu historii zmian w plikach przy pomocy komend [`git add`](https://github.com/git-guides/git-add) oraz [`git commit`](https://github.com/git-guides/git-commit).
+
+Aby wysłać dane na zdalny serwer, wystarczy komenda [`git push`](https://github.com/git-guides/git-push).
+
+> :dart: **Uwaga:** Możesz zamieścić wykonany projekt w swoim portfolio, lecz najpierw **nadpisz obecne README**, by nie udostępniać treści zadania. Zobacz, [jak z forka prywatnego repo zrobić własne repozytorium publiczne](https://github.com/devmentor-pl/from-fork-to-own-repo).
