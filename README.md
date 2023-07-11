@@ -41,7 +41,7 @@ Mirek potrzebuje też udostępniać informacje o specjalistach (wraz z dodanymi 
 
 Na zadanie masz 40 godzin. W tym czasie musisz przygotować minimalną wersję produktu, którą zaprezentujesz Mirkowi. To będzie moment, w którym zdecyduje on, czy chce dalej realizować z Tobą swój pomysł. 
 
-Tak zorganizuj sobie zadania, aby mieć co Mirkowi pokazać. Jednocześnie musi to być działająca aplikacja. Idealnie, gdybyś mógł udowodnić czas spędzony nad kodowaniem np. przy pomocy aplikacji [Time Camp](https://www.timecamp.com/pl/).
+Tak zorganizuj sobie zadania, aby mieć co Mirkowi pokazać. Jednocześnie musi to być działająca aplikacja. Idealnie, gdybyś mógł udowodnić czas spędzony nad kodowaniem np. przy pomocy aplikacji [Rize](https://rize.io?code=B0A7A4) - z kodem `B0A7A4` otrzymasz darmowy miesiąć (tak jak ja).
 
 ## Jak prawidłowo rozpocząć pracę?
 
