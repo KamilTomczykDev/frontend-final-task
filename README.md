@@ -1,3 +1,7 @@
+> 🎯 [*Przygotuj się do rekrutacji w IT*](https://devmentor.pl/p/przygotuj-sie-do-rekrutacji-w-it) to e-book, dzięki któremu odpowiednio zadbasz o **CV**, list motywacyjny, GitHuba czy **profil na LinkedInie**. Dowiesz się również, **jak tworzyć README** do projektów w portfolio.
+>
+> 🎁 Za udział w tym projekcie otrzymujesz **50% rabatu z kodem FFT50** (~~39 zł~~ -> 19,50 zł)! 
+
 # Sprawdź, czy jesteś gotowy na poszukiwanie pracy!
 
 To zadanie powstało w odpowiedzi na pozytywne reakcje widzów na moje [nagranie na YouTubie](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@), w którym zaproponowałem przygotowanie projektu sprawdzającego gotowość do poszukiwania pracy we front endzie.
