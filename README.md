@@ -16,7 +16,7 @@ Mirek potrzebuje rozwiązania, które pozwoli mu gromadzić informacje o swoich 
 
 Jednocześnie Mirek ma możliwość dodawania do każdego panelu notatki, która nie będzie widoczna dla programisty.
 
-Mirek potrzebuje też udostępniać informacje o specjalistach (wraz z dodanymi przez niego notatkami) swoim kontaktom biznesowym. Idealnie, gdyby do udostępnienia mógł wybrać naraz kilku programistów. Informacje byłby dla klienta dostępne pod przesłanym przez Mirka adresem po podaniu prawidłowego hasła.
+Mirek potrzebuje też udostępniać informacje o specjalistach (wraz z dodanymi przez niego notatkami) swoim kontaktom biznesowym. Idealnie, gdyby do udostępnienia mógł wybrać naraz kilku programistów. Informacje byłyby dla klienta dostępne pod przesłanym przez Mirka adresem po podaniu prawidłowego hasła.
 
 
 ## Wymagania
