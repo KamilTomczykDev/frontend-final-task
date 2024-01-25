@@ -3,7 +3,7 @@ import supabase from "../../services/supabase";
 
 const initialState = {
   contacts: {},
-  value: 1,
+  status: "idle",
 };
 
 export const uploadContact = createAsyncThunk(
@@ -22,14 +22,15 @@ export const uploadContact = createAsyncThunk(
 export const contactsSlice = createSlice({
   name: "contacts",
   initialState,
-  reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(uploadContact.fulfilled, () => {
-      console.log("LoadingFulfilled");
+    builder.addCase(uploadContact.fulfilled, (state) => {
+      state.status = "succeeded";
+      console.log(state.status);
+    });
+    builder.addCase(uploadContact.pending, (state) => {
+      state.status = "loading";
+      console.log(state.status);
     });
   },
 });

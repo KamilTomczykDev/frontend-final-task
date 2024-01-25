@@ -1,13 +1,19 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import FormRow from "../../ui/FormRow";
 import { uploadContact } from "./contactsSlice";
 import { useState } from "react";
+import SpinnerMini from "../../ui/SpinnerMini";
 
 function ContactForm() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [telNumber, setTelNumber] = useState("");
+
+  const status = useSelector((state) => state.contacts.status);
+  const isLoading = status === "loading";
+  console.log(status);
+  console.log(isLoading);
 
   const dispatch = useDispatch();
   function handleSubmit(e) {
@@ -19,14 +25,14 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-full max-w-[600px] flex-col gap-2"
+      className="flex w-full max-w-[600px] flex-col gap-2 text-white"
     >
       <FormRow title="Full name">
         <input
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
           type="text"
-          className="w-full rounded-md border-2 border-stone-300 bg-stone-200 p-1"
+          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
         />
       </FormRow>
       <FormRow title="E-mail">
@@ -34,7 +40,7 @@ function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
-          className="w-full rounded-md border-2 border-stone-300 bg-stone-200 p-1"
+          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
         />
       </FormRow>
       <FormRow title="City">
@@ -42,7 +48,7 @@ function ContactForm() {
           value={city}
           onChange={(e) => setCity(e.target.value)}
           type="text"
-          className="w-full rounded-md border-2 border-stone-300 bg-stone-200 p-1"
+          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
         />
       </FormRow>
       <FormRow title="Tel. Number">
@@ -50,11 +56,14 @@ function ContactForm() {
           value={telNumber}
           onChange={(e) => setTelNumber(e.target.value)}
           type="number"
-          className="w-full rounded-md border-2 border-stone-300 bg-stone-200 p-1"
+          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
         />
       </FormRow>
-      <button className="rounded-md border-2 border-stone-400 bg-stone-700 p-2 text-stone-400 hover:bg-stone-600">
-        Submit
+      <button
+        disabled={isLoading}
+        className="border-2 border-blue-300 bg-blue-400 p-2 font-semibold text-stone-700 hover:bg-blue-300 disabled:opacity-70"
+      >
+        {isLoading ? <SpinnerMini /> : "Submit"}
       </button>
     </form>
   );
