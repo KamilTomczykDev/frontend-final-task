@@ -8,7 +8,7 @@
 
 @layer base {
   body {
-    @apply bg-stone-950 font-[Poppins];
+    @apply bg-main-950 font-[Poppins];
   }
   * {
     padding: 0;

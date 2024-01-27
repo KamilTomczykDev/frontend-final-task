@@ -21,49 +21,51 @@ function ContactForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex w-full max-w-[600px] flex-col gap-2 text-white"
-    >
-      <FormRow title="Full name">
-        <input
-          value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
-          type="text"
-          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
-        />
-      </FormRow>
-      <FormRow title="E-mail">
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
-        />
-      </FormRow>
-      <FormRow title="City">
-        <input
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          type="text"
-          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
-        />
-      </FormRow>
-      <FormRow title="Tel. Number">
-        <input
-          value={telNumber}
-          onChange={(e) => setTelNumber(e.target.value)}
-          type="number"
-          className="w-full border-2 border-stone-600 bg-stone-900 p-1"
-        />
-      </FormRow>
-      <button
-        disabled={isLoading}
-        className="border-2 border-blue-300 bg-blue-400 p-2 font-semibold text-stone-700 hover:bg-blue-300 disabled:opacity-70"
+    <div name="form" className="flex w-full items-center justify-center py-10">
+      <form
+        onSubmit={handleSubmit}
+        className="flex w-full max-w-[400px] flex-col gap-1 text-white"
       >
-        {isLoading ? <SpinnerMini /> : "Submit"}
-      </button>
-    </form>
+        <FormRow title="Full name">
+          <input
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            type="text"
+            className="bg-main-800 w-full p-1"
+          />
+        </FormRow>
+        <FormRow title="E-mail">
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            className="bg-main-800 w-full p-1"
+          />
+        </FormRow>
+        <FormRow title="City">
+          <input
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            type="text"
+            className="bg-main-800 w-full p-1"
+          />
+        </FormRow>
+        <FormRow title="Tel. Number">
+          <input
+            value={telNumber}
+            onChange={(e) => setTelNumber(e.target.value)}
+            type="number"
+            className="bg-main-800 w-full p-1"
+          />
+        </FormRow>
+        <button
+          disabled={isLoading}
+          className="bg-secondary-400 hover:bg-secondary-200 text-main-950 mt-10 p-2 font-semibold disabled:opacity-70"
+        >
+          {isLoading ? <SpinnerMini /> : "Submit"}
+        </button>
+      </form>
+    </div>
   );
 }
 

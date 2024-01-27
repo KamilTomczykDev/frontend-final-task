@@ -6,7 +6,7 @@ function AppLayout() {
   const contacts = useSelector((state) => state.contacts.contacts);
   console.log(contacts);
   return (
-    <div className="grid-rows-app-layout grid">
+    <div className="grid-rows-app-layout grid w-full justify-center">
       <AppNav />
       <Outlet />
     </div>

@@ -30,6 +30,12 @@ export const contactsSlice = createSlice({
       console.log(state.status);
     });
     builder.addCase(getContacts.fulfilled, (state, action) => {
+      state.status = "succeeded";
+      state.contacts = action.payload;
+    });
+    builder.addCase(getContacts.pending, (state, action) => {
+      state.status = "loading";
+
       state.contacts = action.payload;
     });
   },

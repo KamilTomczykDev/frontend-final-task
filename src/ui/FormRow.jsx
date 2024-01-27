@@ -1,7 +1,7 @@
 function FormRow({ children, title }) {
   return (
     <>
-      <label className="font-semibold text-stone-700">{title}</label>
+      <label className="font-semibold text-white">{title}</label>
       {children}
     </>
   );

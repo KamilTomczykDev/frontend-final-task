@@ -24,7 +24,7 @@ function LoginForm() {
           required
           onChange={(e) => setLogin(e.target.value)}
           type="text"
-          className="w-full border-2 border-stone-600 bg-stone-950 p-1"
+          className="bg-main-800 w-full p-1"
         ></input>
       </FormRow>
       <FormRow title="Password">
@@ -33,9 +33,9 @@ function LoginForm() {
           required
           onChange={(e) => setPassword(e.target.value)}
           type="password"
-          className="w-full border-2 border-stone-600 bg-stone-950 p-1"
+          className="bg-main-800 w-full p-1"
         ></input>
-        <button className="border-2 border-blue-300 bg-blue-400 p-2 font-semibold text-stone-700 hover:bg-blue-300 disabled:opacity-70">
+        <button className="bg-secondary-400 hover:bg-secondary-200 p-2 font-semibold text-stone-700 transition duration-300 disabled:opacity-70">
           Login
         </button>
       </FormRow>

@@ -9,12 +9,12 @@ function Navbar() {
   }
 
   return (
-    <div className="flex h-[3rem] items-center justify-between border-b-2 border-stone-600 bg-stone-900 px-4 md:h-[4rem]">
+    <div className="bg-main-900 fixed flex h-[3rem] w-full items-center justify-between px-4 md:h-[4rem]">
       <span className="text-2xl font-bold tracking-wide text-white">
         Logo MHH
       </span>
       <div onClick={handleClick} className="cursor-pointer hover:opacity-60">
-        <FaRegUserCircle size={40} color={"white"} />
+        <FaRegUserCircle size={30} color={"#e8861c"} />
       </div>
     </div>
   );

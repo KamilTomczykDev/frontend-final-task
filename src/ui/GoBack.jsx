@@ -6,9 +6,9 @@ function GoBack({ to }) {
   return (
     <div
       onClick={() => navigate(to)}
-      className="flex cursor-pointer items-center gap-1 text-sm text-blue-400 hover:underline"
+      className="text-secondary-400 flex cursor-pointer items-center gap-1 text-sm hover:underline"
     >
-      <FaLongArrowAltLeft color={"#52b7ff"} />
+      <FaLongArrowAltLeft color={"#e8861c"} />
       Go back
     </div>
   );
