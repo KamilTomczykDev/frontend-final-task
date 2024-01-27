@@ -12,8 +12,6 @@ function ContactForm() {
 
   const status = useSelector((state) => state.contacts.status);
   const isLoading = status === "loading";
-  console.log(status);
-  console.log(isLoading);
 
   const dispatch = useDispatch();
   function handleSubmit(e) {

@@ -1,22 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import supabase from "../../services/supabase";
+import { uploadContact as uploadContactApi } from "../../services/apiContacts";
+import { getContacts as getContactsApi } from "../../services/apiContacts";
 
 const initialState = {
-  contacts: {},
+  contacts: [],
   status: "idle",
 };
 
 export const uploadContact = createAsyncThunk(
   "contacts/uploadContact",
-  async (objectData) => {
-    const { data, error } = await supabase
-      .from("contacts")
-      .insert([objectData])
-      .select();
+  async (objectData) => uploadContactApi(objectData),
+);
 
-    if (error) throw new Error(error.message);
-    return data;
-  },
+export const getContacts = createAsyncThunk("contacts/getContacts", async () =>
+  getContactsApi(),
 );
 
 export const contactsSlice = createSlice({
@@ -31,6 +28,9 @@ export const contactsSlice = createSlice({
     builder.addCase(uploadContact.pending, (state) => {
       state.status = "loading";
       console.log(state.status);
+    });
+    builder.addCase(getContacts.fulfilled, (state, action) => {
+      state.contacts = action.payload;
     });
   },
 });
