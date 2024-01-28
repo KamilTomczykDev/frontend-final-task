@@ -11,9 +11,9 @@ function ContactRow({ contact }) {
       <td className="break-all">{email}</td>
       <td className="break-words">{city}</td>
       <td className="break-all">{telNumber}</td>
-      {role === "guest" && (
+      {role === "admin" && (
         <td className="flex gap-1">
-          <AddNote id={id} />
+          <AddNote id={id} fullName={fullName} />
           <input className="w-[10px]" type="checkbox" />
         </td>
       )}
