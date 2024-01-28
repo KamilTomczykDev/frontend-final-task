@@ -4,10 +4,13 @@ import { useEffect } from "react";
 import Spinner from "../../ui/Spinner";
 import ContactTable from "../contacts/ContactTable";
 
-function GuestView() {
+function ContactsView() {
   const { contacts, status } = useSelector((state) => state.contacts);
-  const isLoading = status === "loading";
+  const { role } = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
+  const isLoading = status === "loading";
+
+  let contactsArray = contacts;
 
   useEffect(
     function () {
@@ -15,17 +18,23 @@ function GuestView() {
     },
     [dispatch],
   );
+
   if (isLoading)
     return (
       <div className="flex h-screen w-full items-center justify-center">
         <Spinner color="white" />
       </div>
     );
+
+  if (role === "guest") {
+    contactsArray = contacts.filter((contact) => contact.isVisible === true);
+  }
+
   return (
-    <div className="mt-[60px] flex w-full max-w-[1500px] p-4 text-[10px] text-white md:text-sm">
-      <ContactTable contacts={contacts} isLoading={isLoading} />
+    <div className="mt-[60px] flex w-full max-w-[1500px] p-2 text-[8px] text-white md:p-4 md:text-sm">
+      <ContactTable contacts={contactsArray} isLoading={isLoading} />
     </div>
   );
 }
 
-export default GuestView;
+export default ContactsView;

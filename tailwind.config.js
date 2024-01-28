@@ -7,7 +7,7 @@ export default {
         "app-layout": "60px 1fr",
       },
       gridTemplateColumns: {
-        guest: "1fr 1fr 1fr 1fr",
+        guest: "1fr 2fr 1fr 1fr 40px",
       },
       colors: {
         main: {

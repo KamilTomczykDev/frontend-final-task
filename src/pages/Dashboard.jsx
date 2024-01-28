@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import GuestView from "../features/user/GuestView";
+import GuestView from "../features/user/ContactsView";
 
 function Dashboard() {
   const { role } = useSelector((state) => state.user.user);

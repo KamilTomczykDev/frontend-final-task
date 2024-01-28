@@ -6,9 +6,8 @@ import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./pages/AppLayout";
-import Dashboard from "./pages/Dashboard";
-
 import ProtectedRoute from "./ui/ProtectedRoute";
+import ContactsView from "./features/user/ContactsView";
 
 function App() {
   return (
@@ -25,8 +24,8 @@ function App() {
               </ProtectedRoute>
             }
           >
-            <Route index element={<Navigate replace to="dashboard" />} />
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route index element={<Navigate replace to="contacts" />} />
+            <Route path="contacts" element={<ContactsView />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
