@@ -5,10 +5,9 @@ import Spinner from "../../ui/Spinner";
 import ContactTable from "../contacts/ContactTable";
 
 function ContactsView() {
-  const { contacts, status } = useSelector((state) => state.contacts);
+  const { contacts, isLoading } = useSelector((state) => state.contacts);
   const { role } = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
-  const isLoading = status === "loading";
 
   let contactsArray = contacts;
 

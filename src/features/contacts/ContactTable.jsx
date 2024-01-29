@@ -13,10 +13,9 @@ function ContactTable({ contacts }) {
         </tr>
       </thead>
       <tbody className="flex flex-col">
-        {contacts &&
-          contacts.map((contact) => (
-            <ContactRow key={contact.id} contact={contact} />
-          ))}
+        {contacts.map((contact) => (
+          <ContactRow key={contact.id} contact={contact} />
+        ))}
 
         <ContactRow />
       </tbody>

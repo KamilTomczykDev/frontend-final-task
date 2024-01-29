@@ -1,19 +1,27 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { uploadContact as uploadContactApi } from "../../services/apiContacts";
+import { insertContact as insertContactApi } from "../../services/apiContacts";
 import { getContacts as getContactsApi } from "../../services/apiContacts";
+import { updateContact as updateContactApi } from "../../services/apiContacts";
 
 const initialState = {
   contacts: [],
-  status: "idle",
+  isLoading: false,
 };
 
-export const uploadContact = createAsyncThunk(
-  "contacts/uploadContact",
-  async (objectData) => uploadContactApi(objectData),
+export const insertContact = createAsyncThunk(
+  "contacts/insertContact",
+  async (objectData) => insertContactApi(objectData),
 );
 
 export const getContacts = createAsyncThunk("contacts/getContacts", async () =>
   getContactsApi(),
+);
+
+export const updateContact = createAsyncThunk(
+  "contacts/updateContact",
+  async ({ id, newData }) => {
+    updateContactApi(id, newData);
+  },
 );
 
 export const contactsSlice = createSlice({
@@ -21,22 +29,24 @@ export const contactsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(uploadContact.fulfilled, (state) => {
-      state.status = "succeeded";
-      console.log(state.status);
+    builder.addCase(insertContact.fulfilled, (state) => {
+      state.isLoading = false;
     });
-    builder.addCase(uploadContact.pending, (state) => {
-      state.status = "loading";
-      console.log(state.status);
+    builder.addCase(insertContact.pending, (state) => {
+      state.isLoading = true;
     });
     builder.addCase(getContacts.fulfilled, (state, action) => {
-      state.status = "succeeded";
+      state.isLoading = false;
       state.contacts = action.payload;
     });
-    builder.addCase(getContacts.pending, (state, action) => {
-      state.status = "loading";
-
-      state.contacts = action.payload;
+    builder.addCase(getContacts.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(updateContact.fulfilled, (state) => {
+      state.isLoading = false;
+    });
+    builder.addCase(updateContact.pending, (state) => {
+      state.isLoading = true;
     });
   },
 });

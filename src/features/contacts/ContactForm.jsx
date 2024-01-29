@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import FormRow from "../../ui/FormRow";
-import { uploadContact } from "./contactsSlice";
+import { insertContact } from "./contactsSlice";
 import { useState } from "react";
 import SpinnerMini from "../../ui/SpinnerMini";
 
@@ -10,14 +10,13 @@ function ContactForm() {
   const [city, setCity] = useState("");
   const [telNumber, setTelNumber] = useState("");
 
-  const status = useSelector((state) => state.contacts.status);
-  const isLoading = status === "loading";
+  const { isLoading } = useSelector((state) => state.contacts);
 
   const dispatch = useDispatch();
   function handleSubmit(e) {
     e.preventDefault();
     console.log({ fullName, email, city, telNumber });
-    dispatch(uploadContact({ fullName, email, city, telNumber }));
+    dispatch(insertContact({ fullName, email, city, telNumber }));
   }
 
   return (
