@@ -7,7 +7,7 @@ function ContactRow({ contact }) {
   if (!contact) return;
   const { id, fullName, email, city, telNumber, isVisible } = contact;
   return (
-    <tr className="grid-cols-guest border-main-800 grid items-center gap-1 border-t-2 py-2 text-center md:gap-6">
+    <tr className="grid grid-cols-guest items-center gap-1 border-t-2 border-main-800 py-2 text-center md:gap-6">
       <td className="break-words">{fullName}</td>
       <td className="break-all">{email}</td>
       <td className="break-words">{city}</td>
