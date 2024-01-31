@@ -24,6 +24,13 @@ export const updateContact = createAsyncThunk(
   },
 );
 
+export const updateAndThenGet =
+  ({ id, newData }) =>
+  async (dispatch) => {
+    await dispatch(updateContact({ id, newData }));
+    return await dispatch(getContacts());
+  };
+
 export const contactsSlice = createSlice({
   name: "contacts",
   initialState,

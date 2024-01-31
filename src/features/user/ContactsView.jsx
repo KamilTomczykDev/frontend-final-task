@@ -18,6 +18,10 @@ function ContactsView() {
     [dispatch],
   );
 
+  function handleClick() {
+    dispatch(getContacts());
+  }
+
   if (isLoading)
     return (
       <div className="flex h-screen w-full items-center justify-center">
@@ -30,7 +34,10 @@ function ContactsView() {
   }
 
   return (
-    <div className="mt-[60px] flex w-full max-w-[1500px] p-2 text-[8px] text-white md:p-4 md:text-sm">
+    <div className="mt-[60px] flex w-full max-w-[1500px] flex-col gap-1 p-2  text-[8px] text-white md:p-4 md:text-sm">
+      <button onClick={handleClick} className="bg-secondary-400 p-1">
+        Refresh
+      </button>
       <ContactTable contacts={contactsArray} isLoading={isLoading} />
     </div>
   );

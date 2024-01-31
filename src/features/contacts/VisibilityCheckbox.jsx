@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 // import { updateContact } from "./contactsSlice";
 import { useState } from "react";
-import { getContacts, updateContact } from "./contactsSlice";
+import { updateAndThenGet } from "./contactsSlice";
+// import { getContacts, updateAndThenGet, updateContact } from "./contactsSlice";
 
 function VisibilityCheckbox({ id, isVisible }) {
   const [isChecked, setIsChecked] = useState(isVisible);
@@ -13,8 +14,9 @@ function VisibilityCheckbox({ id, isVisible }) {
     console.log(!isChecked, isChecked);
 
     setIsChecked(!isChecked);
-    dispatch(updateContact({ id, newData: { isVisible: !isVisible } }));
-    dispatch(getContacts());
+    // dispatch(updateContact({ id, newData: { isVisible: !isVisible } }));
+    // dispatch(getContacts());
+    dispatch(updateAndThenGet({ id, newData: { isVisible: !isVisible } }));
   }
   return (
     <>
