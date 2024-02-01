@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { MdNoteAdd } from "react-icons/md";
+import { PiNotePencilFill } from "react-icons/pi";
 
-import Modal from "./Modal";
+import Modal from "../contacts/Modal";
 import AddNoteForm from "./AddNoteForm";
 
 function AddNote({ id, fullName }) {
@@ -18,7 +18,7 @@ function AddNote({ id, fullName }) {
         onClick={handleClick}
         className="transition duration-300 hover:opacity-60"
       >
-        <MdNoteAdd size={20} color={"#e8861c"} />
+        <PiNotePencilFill size={20} color={"#e8861c"} />
       </button>
       {isModal && (
         <Modal onClose={handleClick}>

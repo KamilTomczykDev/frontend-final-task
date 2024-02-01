@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateContact } from "./contactsSlice";
+import { updateAndThenGet } from "../contacts/contactsSlice";
+
 import SpinnerMini from "../../ui/SpinnerMini";
 
 function AddNoteForm({ id, fullName }) {
@@ -11,7 +12,7 @@ function AddNoteForm({ id, fullName }) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(id, note);
-    dispatch(updateContact({ id, newData: { note: note } }));
+    dispatch(updateAndThenGet({ id, newData: { note: note } }));
   }
   console.log(id);
   return (
@@ -25,7 +26,7 @@ function AddNoteForm({ id, fullName }) {
       />
       <button
         onClick={(e) => e.stopPropagation()}
-        className="bg-secondary-400 hover:bg-secondary-200 text-main-950 p-2 font-semibold disabled:opacity-60"
+        className="bg-secondary-400 p-2 font-semibold text-main-950 hover:bg-secondary-200 disabled:opacity-60"
       >
         {isLoading ? <SpinnerMini /> : "Add note"}
       </button>

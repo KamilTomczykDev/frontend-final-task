@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import toast from "react-hot-toast";
 
 const initialState = {
   user: {},
@@ -28,6 +29,7 @@ export const userSlice = createSlice({
       ) {
         state.user = FAKE_ADMIN;
         state.isAuthenticated = true;
+        toast.success("You've logged in successfully");
       }
       if (
         action.payload.login === FAKE_GUEST.login &&
@@ -35,12 +37,13 @@ export const userSlice = createSlice({
       ) {
         state.user = FAKE_GUEST;
         state.isAuthenticated = true;
+        toast.success("You've logged in successfully");
       }
-      state.username = action.payload.username;
     },
     logoutUser(state) {
       state.user = {};
       state.isAuthenticated = false;
+      toast.success("Logged out successfully");
     },
   },
 });

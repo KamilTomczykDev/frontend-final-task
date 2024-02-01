@@ -9,7 +9,15 @@ function ContactsView() {
   const { role } = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
 
-  let contactsArray = contacts;
+  let contactsArray = [...contacts];
+
+  contactsArray.sort((a, b) => {
+    if (a.fullName < b.fullName) return -1;
+
+    if (a.fullName > b.fullName) return 1;
+    return 0;
+  });
+  //sort array a - z
 
   useEffect(
     function () {
@@ -34,8 +42,11 @@ function ContactsView() {
   }
 
   return (
-    <div className="mt-[60px] flex w-full max-w-[1500px] flex-col gap-1 p-2  text-[8px] text-white md:p-4 md:text-sm">
-      <button onClick={handleClick} className="bg-secondary-400 p-1">
+    <div className="mt-[60px] flex w-full max-w-[1500px] flex-col gap-1 p-2 text-[8px] text-white md:p-4 md:text-sm">
+      <button
+        onClick={handleClick}
+        className="bg-secondary-400 p-1 hover:bg-secondary-200"
+      >
         Refresh
       </button>
       <ContactTable contacts={contactsArray} isLoading={isLoading} />

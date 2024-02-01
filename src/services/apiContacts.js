@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import supabase from "./supabase";
 
 export async function insertContact(objectData) {
@@ -6,7 +7,13 @@ export async function insertContact(objectData) {
     .insert([objectData])
     .select();
 
-  if (error) throw new Error(error.message);
+  if (error) {
+    toast.error(`Contact added unsuccessfully: ${error.message}`);
+    throw new Error(error.message);
+  }
+
+  toast.success("Contact added successfully");
+
   return data;
 }
 
@@ -27,7 +34,12 @@ export async function updateContact(id, newData) {
   console.log(id, newData);
   console.log(data);
 
-  if (error) throw new Error(error.message);
+  if (error) {
+    toast.error(`Data updated unsuccessfully: ${error.message}`);
+    throw new Error(error.message);
+  }
+
+  toast.success("Data updated successfully");
 
   return data;
 }

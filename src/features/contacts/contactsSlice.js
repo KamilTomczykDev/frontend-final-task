@@ -28,7 +28,9 @@ export const updateAndThenGet =
   ({ id, newData }) =>
   async (dispatch) => {
     await dispatch(updateContact({ id, newData }));
-    return await dispatch(getContacts());
+    return setTimeout(async function () {
+      await dispatch(getContacts());
+    }, 200);
   };
 
 export const contactsSlice = createSlice({
@@ -54,6 +56,9 @@ export const contactsSlice = createSlice({
     });
     builder.addCase(updateContact.pending, (state) => {
       state.isLoading = true;
+    });
+    builder.addCase(updateContact.rejected, (state) => {
+      state.isLoading = false;
     });
   },
 });
