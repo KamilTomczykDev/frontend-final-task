@@ -63,6 +63,4 @@ export const contactsSlice = createSlice({
   },
 });
 
-export const { increment } = contactsSlice.actions;
-
 export default contactsSlice.reducer;

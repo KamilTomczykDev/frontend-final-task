@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PiNoteFill } from "react-icons/pi";
-import Modal from "../contacts/Modal";
+import Modal from "../../ui/Modal";
 
 function ViewNote({ note }) {
   const [isModal, setIsModal] = useState(false);

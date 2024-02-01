@@ -24,7 +24,8 @@ function LoginForm() {
           required
           onChange={(e) => setLogin(e.target.value)}
           type="text"
-          className="bg-main-800 w-full p-1"
+          placeholder="admin"
+          className="w-full bg-main-800 p-1"
         ></input>
       </FormRow>
       <FormRow title="Password">
@@ -33,9 +34,10 @@ function LoginForm() {
           required
           onChange={(e) => setPassword(e.target.value)}
           type="password"
-          className="bg-main-800 w-full p-1"
+          placeholder="1234"
+          className="w-full bg-main-800 p-1"
         ></input>
-        <button className="bg-secondary-400 hover:bg-secondary-200 p-2 font-semibold text-stone-700 transition duration-300 disabled:opacity-70">
+        <button className="bg-secondary-400 p-2 font-semibold text-stone-700 transition duration-300 hover:bg-secondary-200 disabled:opacity-70">
           Login
         </button>
       </FormRow>

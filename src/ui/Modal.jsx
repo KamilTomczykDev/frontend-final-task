@@ -2,7 +2,6 @@ import { createPortal } from "react-dom";
 import { ImCross } from "react-icons/im";
 
 function Modal({ children, onClose }) {
-  //modal will close on click of the button not on the background
   return createPortal(
     <div
       onClick={onClose}
@@ -10,7 +9,7 @@ function Modal({ children, onClose }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-main-950 fixed left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] flex-col items-start justify-start gap-2 p-2 md:p-4"
+        className="fixed left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] flex-col items-start justify-start gap-2 bg-main-950 p-2 md:p-4"
       >
         <button
           onClick={onClose}

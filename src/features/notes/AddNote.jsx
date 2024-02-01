@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PiNotePencilFill } from "react-icons/pi";
 
-import Modal from "../contacts/Modal";
+import Modal from "../../ui/Modal";
 import AddNoteForm from "./AddNoteForm";
 
 function AddNote({ id, fullName }) {
