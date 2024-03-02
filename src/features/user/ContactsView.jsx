@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getContacts } from "../contacts/contactsSlice";
 import { useEffect } from "react";
+import { getContacts } from "../contacts/contactsSlice";
+
 import Spinner from "../../ui/Spinner";
 import ContactTable from "../contacts/ContactTable";
+import ContactsStats from "../contacts/ContactsStats";
 
 function ContactsView() {
   const { contacts, isLoading } = useSelector((state) => state.contacts);
@@ -43,6 +45,7 @@ function ContactsView() {
 
   return (
     <div className="mt-[60px] flex w-full max-w-[1500px] flex-col gap-1 p-2 text-[8px] text-white md:p-4 md:text-sm">
+      {role === "admin" && <ContactsStats contacts={contactsArray} />}
       <button
         onClick={handleClick}
         className="bg-secondary-400 p-1 hover:bg-secondary-200"

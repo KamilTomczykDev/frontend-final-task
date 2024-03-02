@@ -10,9 +10,12 @@ function Logout() {
   }
 
   return (
-    <div onClick={handleClick} className="hover:opacity-70">
+    <button
+      onClick={handleClick}
+      className="flex items-center justify-center hover:opacity-70"
+    >
       <MdLogout size={30} />
-    </div>
+    </button>
   );
 }
 
