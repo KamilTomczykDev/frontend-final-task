@@ -5,9 +5,9 @@
 # Headhunting Center - Javascript project
 The Headhunting Center is a project I found on the devmentor.pl website. It was supposed to meet certain conditions that were to determine whether I am ready to start applying for junior positions.
 
-# [Live DEMO](https://headhunting-center.vercel.app)
+# [Live DEMO](https://headhunting-center.vercel.app/)
 
-<img src="src/img/app-preview.gif" />
+<img src="src/assets/app-preview.gif" />
 <br>
 <br>
 
